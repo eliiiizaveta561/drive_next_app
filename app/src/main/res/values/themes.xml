@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="Theme.MyApplication" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.DriveNext" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorError">@color/error</item>
@@ -11,15 +11,13 @@
         <item name="fontFamily">@font/montserrat</item>
     </style>
 
-    <!-- Тема SplashScreen API: белый фон без иконки, сразу за ним идёт экран загрузки из макета -->
     <style name="Theme.App.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="postSplashScreenTheme">@style/Theme.MyApplication</item>
+        <item name="postSplashScreenTheme">@style/Theme.DriveNext</item>
     </style>
 
-    <!-- Тексты -->
     <style name="Text">
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:textColor">@color/text_primary</item>
@@ -61,7 +59,6 @@
         <item name="android:textColor">@color/error</item>
     </style>
 
-    <!-- Кнопки -->
     <style name="Button" parent="Widget.Material3.Button">
         <item name="android:layout_height">52dp</item>
         <item name="android:fontFamily">@font/montserrat</item>
@@ -88,7 +85,6 @@
         <item name="android:textColor">@color/text_outlined_button</item>
     </style>
 
-    <!-- Поле ввода с рамкой; подпись к полю — отдельный TextView над ним -->
     <style name="Field" parent="Widget.Material3.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -133,7 +129,6 @@
         <item name="buttonTint">@color/checkbox_tint</item>
     </style>
 
-    <!-- Загрузка фото документа -->
     <style name="UploadRow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

@@ -2,12 +2,10 @@
     <string name="app_name">DriveNext</string>
     <string name="slogan">Поможем найти твою следующую поездку</string>
 
-    <!-- Нет подключения -->
     <string name="no_connection_title">Нет подключения\nк интернету</string>
     <string name="no_connection_desc">Проверьте подключение и повторите попытку</string>
     <string name="retry">Повторить попытку</string>
 
-    <!-- Онбординг -->
     <string name="skip">Пропустить</string>
     <string name="next">Далее</string>
     <string name="lets_go">Поехали</string>
@@ -18,11 +16,9 @@
     <string name="onboarding_title_3">Лучшие предложения</string>
     <string name="onboarding_desc_3">Выбирай понравившееся среди сотен доступных автомобилей</string>
 
-    <!-- Вход/регистрация -->
     <string name="sign_in">Войти</string>
     <string name="sign_up">Зарегистрироваться</string>
 
-    <!-- Вход в аккаунт -->
     <string name="login_title">Войдите в аккаунт</string>
     <string name="login_subtitle">Пожалуйста, введите свои данные</string>
     <string name="email">Электронная почта</string>
@@ -31,7 +27,6 @@
     <string name="password_hint">Введите пароль</string>
     <string name="forgot_password">Забыли пароль?</string>
 
-    <!-- Регистрация -->
     <string name="create_account">Создать аккаунт</string>
     <string name="back">Назад</string>
     <string name="new_password">Придумайте пароль</string>
@@ -60,12 +55,10 @@
     <string name="camera">Камера</string>
     <string name="select_date">Выбор даты</string>
 
-    <!-- Успешная регистрация -->
     <string name="success_title">Пользуйтесь с удовольствием</string>
     <string name="success_congrats">Поздравляем</string>
     <string name="success_desc">Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание.</string>
 
-    <!-- Ошибки -->
     <string name="error_title">Ошибка</string>
     <string name="ok">ОК</string>
     <string name="error_email">Введите корректный адрес электронной почты.</string>

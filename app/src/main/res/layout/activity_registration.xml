@@ -39,7 +39,6 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <!-- Индикация запроса к серверу, перекрывает экран -->
     <FrameLayout
         android:id="@+id/loading"
         android:layout_width="match_parent"

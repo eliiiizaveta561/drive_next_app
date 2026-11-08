@@ -12,10 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.DriveNext">
 
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".ui.start.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Splash">
             <intent-filter>

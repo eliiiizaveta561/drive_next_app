@@ -4,20 +4,19 @@ plugins {
     alias(libs.plugins.android.application)
 }
 
-// Ключи Supabase лежат в local.properties (файл не попадает в git)
 val localProperties = Properties().apply {
     val file = rootProject.file("local.properties")
     if (file.exists()) file.inputStream().use { load(it) }
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.drivenext.app"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.drivenext.app"
         minSdk = 31
         targetSdk = 37
         versionCode = 1
@@ -31,6 +30,7 @@ android {
 
     buildFeatures {
         buildConfig = true
+        viewBinding = true
     }
 
     buildTypes {
