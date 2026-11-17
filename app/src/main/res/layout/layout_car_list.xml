@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Общий блок списка автомобилей: список, загрузка, ошибка с повтором, пустой результат.
+     Используется на экранах «Главная» и «Результаты поиска». -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/screen_margin"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_car" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        style="@style/Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/screen_margin"
+        android:textColor="@color/text_hint"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/errorBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/screen_margin"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvError"
+            style="@style/Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/text_secondary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRetry"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/retry"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</FrameLayout>

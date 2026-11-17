@@ -17,3 +17,5 @@ fun Context.showErrorDialog(message: String) {
 fun Context.showErrorDialog(@StringRes messageRes: Int) = showErrorDialog(getString(messageRes))
 
 fun Fragment.showErrorDialog(@StringRes messageRes: Int) = requireContext().showErrorDialog(messageRes)
+
+fun Fragment.showErrorDialog(message: String) = requireContext().showErrorDialog(message)

@@ -64,6 +64,16 @@
     <string name="nav_settings">Настройки</string>
     <string name="coming_soon">Этот экран появится в следующей лабораторной работе</string>
 
+    <string name="home_title">Давайте найдем автомобиль</string>
+    <string name="search_hint">Введите марку автомобиля</string>
+    <string name="book">Забронировать</string>
+    <string name="details">Детали</string>
+    <string name="price_rub">%1$d₽</string>
+    <string name="per_day">в день</string>
+    <string name="cars_empty">Сейчас нет доступных автомобилей</string>
+    <string name="rent_title">Оформление аренды</string>
+    <string name="details_title">Детали</string>
+
     <string name="error_title">Ошибка</string>
     <string name="ok">ОК</string>
     <string name="error_email">Введите корректный адрес электронной почты.</string>
@@ -81,5 +91,6 @@
     <string name="error_rate_limit">Слишком много попыток. Повторите позже.</string>
     <string name="error_network">Не удалось связаться с сервером. Проверьте подключение к интернету.</string>
     <string name="error_not_authorized">Сессия истекла. Войдите в аккаунт заново.</string>
+    <string name="error_load_data">Не удалось загрузить данные. Попробуйте снова.</string>
     <string name="error_unknown">Что-то пошло не так. Повторите попытку.</string>
 </resources>

@@ -2,13 +2,18 @@ package com.drivenext.app.ui.home
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.drivenext.app.R
-import com.drivenext.app.databinding.FragmentPlaceholderBinding
+import com.drivenext.app.databinding.FragmentHomeBinding
+import com.drivenext.app.ui.cars.CarListFragment
 
-class HomeFragment : Fragment(R.layout.fragment_placeholder) {
+class HomeFragment : CarListFragment(R.layout.fragment_home) {
+
+    override val viewModel: HomeViewModel by viewModels()
+    override val emptyTextRes = R.string.cars_empty
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        FragmentPlaceholderBinding.bind(view).tvTitle.setText(R.string.nav_home)
+        val binding = FragmentHomeBinding.bind(view)
+        setupCarList(binding.carList)
     }
 }

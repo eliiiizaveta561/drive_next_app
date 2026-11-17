@@ -162,6 +162,16 @@
         <item name="android:textColor">@color/text_hint</item>
     </style>
 
+    <style name="CarSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="iconifiedByDefault">false</item>
+        <item name="queryHint">@string/search_hint</item>
+        <item name="searchIcon">@drawable/ic_search</item>
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="submitBackground">@android:color/transparent</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:inputType">text</item>
+    </style>
+
     <style name="Shape.Circle" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>

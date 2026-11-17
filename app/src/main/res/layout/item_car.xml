@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ячейка списка RecyclerView: карточка одного автомобиля -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/text_primary"
+    app:strokeWidth="1.5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvModel"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/ivCar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="S 500 Sedan" />
+
+        <TextView
+            android:id="@+id/tvBrand"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/ivCar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvModel"
+            tools:text="Mercedes-Benz" />
+
+        <LinearLayout
+            android:id="@+id/priceRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBrand">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textFontWeight="600"
+                tools:text="2500₽" />
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/per_day"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/specsRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/ivCar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/priceRow">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_transmission"
+                app:tint="@color/text_hint" />
+
+            <TextView
+                android:id="@+id/tvTransmission"
+                style="@style/Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/text_label"
+                android:textSize="12sp"
+                tools:text="А/Т" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="12dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_fuel"
+                app:tint="@color/text_hint" />
+
+            <TextView
+                android:id="@+id/tvFuel"
+                style="@style/Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_label"
+                android:textSize="12sp"
+                tools:text="Бензин" />
+        </LinearLayout>
+
+        <!-- Фото занимает ~половину ширины карточки на любом экране -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/specsRow"
+            app:layout_constraintDimensionRatio="16:10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            app:shapeAppearanceOverlay="@style/Shape.Rounded"
+            tools:src="@drawable/car_placeholder" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/infoBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="specsRow,ivCar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBook"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="6dp"
+            android:paddingHorizontal="4dp"
+            android:text="@string/book"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toStartOf="@id/btnDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoBottom" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDetails"
+            style="@style/Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="6dp"
+            android:paddingHorizontal="4dp"
+            android:text="@string/details"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnBook"
+            app:layout_constraintTop_toTopOf="@id/btnBook"
+            app:strokeColor="@color/primary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
