@@ -75,5 +75,6 @@
     <string name="error_email_not_confirmed">Подтвердите электронную почту по ссылке из письма.</string>
     <string name="error_rate_limit">Слишком много попыток. Повторите позже.</string>
     <string name="error_network">Не удалось связаться с сервером. Проверьте подключение к интернету.</string>
+    <string name="error_not_authorized">Сессия истекла. Войдите в аккаунт заново.</string>
     <string name="error_unknown">Что-то пошло не так. Повторите попытку.</string>
 </resources>
