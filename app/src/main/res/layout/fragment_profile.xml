@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- По макету стрелки «Назад» нет: возврат системной кнопкой или повторным нажатием на вкладку -->
+        <TextView
+            style="@style/Text.ScreenTitle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/profile_title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/screen_margin"
+                android:paddingBottom="@dimen/screen_margin">
+
+                <!-- Аватар: по нажатию выбираем новое фото -->
+                <FrameLayout
+                    android:id="@+id/avatar"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/change_avatar">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar_placeholder"
+                        app:shapeAppearanceOverlay="@style/Shape.Circle"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="2dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg_circle_primary"
+                        android:importantForAccessibility="no"
+                        android:padding="7dp"
+                        android:src="@drawable/ic_edit" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/avatarProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:textFontWeight="600"
+                    android:textSize="20sp"
+                    tools:text="Иван Иванов" />
+
+                <TextView
+                    android:id="@+id/tvJoined"
+                    style="@style/Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    tools:text="Присоединился в июле 2024" />
+
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/email" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    style="@style/ProfileValue"
+                    tools:text="ivanov@mtuci.ru" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:text="@string/password" />
+
+                <TextView
+                    style="@style/ProfileValue"
+                    android:text="@string/change_password" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:text="@string/gender" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    style="@style/ProfileValue"
+                    tools:text="Мужской" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:text="@string/google" />
+
+                <TextView
+                    style="@style/ProfileValue"
+                    android:text="@string/google_not_linked" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/btnSignOut"
+                    style="@style/Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:text="@string/sign_out"
+                    android:textFontWeight="600" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+
+</FrameLayout>

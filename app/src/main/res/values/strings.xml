@@ -87,6 +87,29 @@
     <string name="invite_text">Арендую машины в DriveNext — присоединяйся!</string>
     <string name="in_development">Раздел в разработке</string>
 
+    <string name="profile_title">Профиль</string>
+    <string name="change_avatar">Изменить фото профиля</string>
+    <string name="joined_at">Присоединился в %1$s %2$d</string>
+    <string name="change_password">Поменять пароль</string>
+    <string name="google">Google</string>
+    <string name="google_not_linked">Не привязан</string>
+    <string name="not_specified">Не указан</string>
+    <string name="sign_out">Выйти из профиля</string>
+    <string-array name="months_prepositional">
+        <item>январе</item>
+        <item>феврале</item>
+        <item>марте</item>
+        <item>апреле</item>
+        <item>мае</item>
+        <item>июне</item>
+        <item>июле</item>
+        <item>августе</item>
+        <item>сентябре</item>
+        <item>октябре</item>
+        <item>ноябре</item>
+        <item>декабре</item>
+    </string-array>
+
     <string name="error_title">Ошибка</string>
     <string name="ok">ОК</string>
     <string name="error_email">Введите корректный адрес электронной почты.</string>

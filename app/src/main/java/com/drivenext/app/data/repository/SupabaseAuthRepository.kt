@@ -37,6 +37,17 @@ class SupabaseAuthRepository(private val context: Context) : AuthRepository {
         saveCurrentSession()
     }
 
+    /**
+     * Выход: пробуем завершить сессию на сервере, но локально данные очищаем в любом случае —
+     * даже без интернета пользователь должен выйти из аккаунта.
+     */
+    override suspend fun signOut(): Result<Unit> {
+        val serverResult = runRequest(context) { auth.signOut() }
+        if (serverResult.isFailure) runRequest(context) { auth.clearSession() }
+        sessionStorage.clearSession()
+        return Result.success(Unit)
+    }
+
     private fun RegistrationData.toUserMetadata(): JsonObject = buildJsonObject {
         put("last_name", lastName)
         put("first_name", firstName)

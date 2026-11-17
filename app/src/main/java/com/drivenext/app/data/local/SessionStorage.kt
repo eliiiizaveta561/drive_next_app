@@ -18,6 +18,13 @@ class SessionStorage(context: Context) {
         }
     }
 
+    fun clearSession() {
+        prefs.edit {
+            remove(KEY_ACCESS_TOKEN)
+            remove(KEY_EXPIRES_AT)
+        }
+    }
+
     fun hasActiveSession(): Boolean {
         val token = prefs.getString(KEY_ACCESS_TOKEN, null)
         val expiresAt = prefs.getLong(KEY_EXPIRES_AT, 0L)

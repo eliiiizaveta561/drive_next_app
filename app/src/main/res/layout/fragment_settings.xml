@@ -91,26 +91,26 @@
                     android:id="@+id/itemBookings"
                     style="@style/SettingsItem"
                     android:layout_marginTop="12dp"
-                    android:drawableStart="@drawable/ic_bookings"
+                    app:drawableStartCompat="@drawable/ic_bookings"
                     android:text="@string/my_bookings" />
 
                 <TextView
                     android:id="@+id/itemTheme"
                     style="@style/SettingsItem"
                     android:layout_marginTop="8dp"
-                    android:drawableStart="@drawable/ic_theme"
+                    app:drawableStartCompat="@drawable/ic_theme"
                     android:text="@string/theme" />
 
                 <TextView
                     android:id="@+id/itemNotifications"
                     style="@style/SettingsItem"
-                    android:drawableStart="@drawable/ic_notifications"
+                    app:drawableStartCompat="@drawable/ic_notifications"
                     android:text="@string/notifications" />
 
                 <TextView
                     android:id="@+id/itemAddCar"
                     style="@style/SettingsItem"
-                    android:drawableStart="@drawable/ic_car"
+                    app:drawableStartCompat="@drawable/ic_car"
                     android:text="@string/connect_car" />
 
                 <View style="@style/Divider" />
@@ -118,13 +118,13 @@
                 <TextView
                     android:id="@+id/itemHelp"
                     style="@style/SettingsItem"
-                    android:drawableStart="@drawable/ic_help"
+                    app:drawableStartCompat="@drawable/ic_help"
                     android:text="@string/help" />
 
                 <TextView
                     android:id="@+id/itemInvite"
                     style="@style/SettingsItem"
-                    android:drawableStart="@drawable/ic_mail"
+                    app:drawableStartCompat="@drawable/ic_mail"
                     android:text="@string/invite_friend" />
             </LinearLayout>
         </ScrollView>

@@ -14,6 +14,8 @@ import com.drivenext.app.domain.model.UserProfile
 import com.drivenext.app.ui.common.RequestState
 import com.drivenext.app.ui.common.loadRemote
 import com.drivenext.app.ui.common.showErrorDialog
+import com.drivenext.app.ui.main.openInCurrentTab
+import com.drivenext.app.ui.profile.ProfileFragment
 import com.drivenext.app.ui.stub.StubActivity
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
@@ -23,6 +25,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentSettingsBinding.bind(view)
 
+        binding.profileRow.setOnClickListener { openInCurrentTab(ProfileFragment()) }
         binding.itemBookings.setOnClickListener { StubActivity.open(requireContext(), R.string.my_bookings) }
         binding.itemAddCar.setOnClickListener { StubActivity.open(requireContext(), R.string.add_car_title) }
         binding.itemNotifications.setOnClickListener { openNotificationSettings() }
