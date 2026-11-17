@@ -71,6 +71,9 @@
     <string name="price_rub">%1$d₽</string>
     <string name="per_day">в день</string>
     <string name="cars_empty">Сейчас нет доступных автомобилей</string>
+    <string name="search_results_title">Результаты поиска</string>
+    <string name="search_query_label">По запросу «%1$s»</string>
+    <string name="search_empty">По вашему запросу ничего не найдено</string>
     <string name="rent_title">Оформление аренды</string>
     <string name="details_title">Детали</string>
 
@@ -92,5 +95,7 @@
     <string name="error_network">Не удалось связаться с сервером. Проверьте подключение к интернету.</string>
     <string name="error_not_authorized">Сессия истекла. Войдите в аккаунт заново.</string>
     <string name="error_load_data">Не удалось загрузить данные. Попробуйте снова.</string>
+    <string name="error_search">Не удалось выполнить поиск. Попробуйте снова.</string>
+    <string name="error_search_empty">Введите марку или модель автомобиля.</string>
     <string name="error_unknown">Что-то пошло не так. Повторите попытку.</string>
 </resources>
