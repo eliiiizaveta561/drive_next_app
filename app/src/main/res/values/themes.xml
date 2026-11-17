@@ -172,6 +172,25 @@
         <item name="android:inputType">text</item>
     </style>
 
+    <style name="SettingsItem" parent="Text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableEnd">@drawable/ic_chevron_right</item>
+        <item name="android:drawableTint">@color/text_primary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginVertical">8dp</item>
+        <item name="android:background">@color/indicator_inactive</item>
+    </style>
+
     <style name="Shape.Circle" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>

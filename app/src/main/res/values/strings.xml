@@ -77,6 +77,16 @@
     <string name="rent_title">Оформление аренды</string>
     <string name="details_title">Детали</string>
 
+    <string name="my_bookings">Мои бронирования</string>
+    <string name="theme">Тема</string>
+    <string name="notifications">Уведомления</string>
+    <string name="connect_car">Подключить свой автомобиль</string>
+    <string name="add_car_title">Добавление автомобиля</string>
+    <string name="help">Помощь</string>
+    <string name="invite_friend">Пригласи друга</string>
+    <string name="invite_text">Арендую машины в DriveNext — присоединяйся!</string>
+    <string name="in_development">Раздел в разработке</string>
+
     <string name="error_title">Ошибка</string>
     <string name="ok">ОК</string>
     <string name="error_email">Введите корректный адрес электронной почты.</string>
