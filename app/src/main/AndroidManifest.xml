@@ -36,7 +36,10 @@
             android:name=".ui.registration.RegistrationActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.registration.RegistrationSuccessActivity" />
-        <activity android:name=".ui.main.MainActivity" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.stub.StubActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

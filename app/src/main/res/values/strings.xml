@@ -59,6 +59,11 @@
     <string name="success_congrats">Поздравляем</string>
     <string name="success_desc">Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание.</string>
 
+    <string name="nav_home">Главная</string>
+    <string name="nav_favorites">Избранное</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="coming_soon">Этот экран появится в следующей лабораторной работе</string>
+
     <string name="error_title">Ошибка</string>
     <string name="ok">ОК</string>
     <string name="error_email">Введите корректный адрес электронной почты.</string>
